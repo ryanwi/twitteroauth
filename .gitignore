@@ -1,0 +1,22 @@
+# specific directories
+
+google_appengine
+
+# config/generated files
+
+
+# hidden files
+
+.DS_Store
+.sconsign*
+.svn
+
+# file patterns
+
+*.dylib
+*.la
+*.lo
+*.o
+*.pyc
+*.pyo
+*.so

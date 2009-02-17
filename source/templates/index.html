@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Twitter OAuth Demo</title>
+</head>
+<body>
+<h1>Twitter OAuth Demo App</h1>
+
+
+{% if is_user_logged_in %}
+
+  <p>
+  <a href="/oauth/twitter/logout">Logout from Twitter</a>
+  </p>
+  
+  <strong>Screen Name:</strong> {{ screen_name }} <br /> 
+<!--
+  <strong>Location:</strong> {{ info.location }} <br />
+  <strong>API Rate Limit Status:</strong> {{ rate_info }}
+-->
+
+  <p>
+  <form action="/status/update" method="post">
+  <textarea name="status" id="status" rows="2" cols="40"></textarea> <br />
+  <input type="submit" name="update" value="update" />
+  </form>
+  </p>
+  
+  <p>
+  <ol>
+  {% for status in timeline %}
+    <li><strong>{{ status.user.screen_name }}</strong> {{ status.text }}<li>
+  {% endfor %}
+  </ol>
+  
+{% else %}
+
+  <a href="/oauth/twitter/login">Login from Twitter</a>
+
+{% endif %}
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4895183-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+<hr style="margin-top:100px;" />
+
+<p><strong>Just say no to giving away your Twitter password</strong></p>
+<p>This is a proof of concept for utilizing the Twitter API with OAuth.  It runs on Google App Engine (python).</p> 
+<p>App by <a href="http://tav.espians.com/">Tav</a> (<a href="http://twitter.com/tav">@tav</a>) and <a href="http://tweetpros.com">TweetPros</a> (<a href="http://twitter.com/tweetpros">@tweetpros</a>)</p>
+<p><a href="http://github.com/tav/tweetapp/tree/master">original source code available at github</a> (this site is a derivative)</p>
+
+</body>
+</html>
