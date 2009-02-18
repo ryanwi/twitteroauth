@@ -8,6 +8,7 @@
 #
 # Other credits include:
 # The "official" OAuth python library: http://oauth.googlecode.com/svn/code/python/
+# The fftogo application: http://github.com/bgolub/fftogo/tree/master
 # The FriendFeed python library: http://code.google.com/p/friendfeed-api/
 #
 
