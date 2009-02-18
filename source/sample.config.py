@@ -2,6 +2,8 @@
 # configuration: copy this file to ``config.py`` and set these to suit your app!
 # ------------------------------------------------------------------------------
 
+from datetime import timedelta
+
 OAUTH_APP_SETTINGS = {
         'consumer_key': '',
         'consumer_secret': '',
