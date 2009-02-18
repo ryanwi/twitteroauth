@@ -2,7 +2,7 @@
 # configuration: copy this file to ``app.yaml`` and set these to suit your app!
 # ------------------------------------------------------------------------------
 
-application: yourapp
+application: new-project-template
 version: 1
 runtime: python
 api_version: 1
