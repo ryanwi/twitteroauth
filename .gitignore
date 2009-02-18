@@ -4,6 +4,8 @@ google_appengine
 
 # config/generated files
 
+source/app.yaml
+source/templates/includes/ga.txt
 
 # hidden files
 
